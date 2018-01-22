@@ -13,6 +13,7 @@ demo.state1.prototype = {
         // Käynnistetään fysiikkamoottori
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.stage.backgroundColor = '#ffff00';
+        game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
         
         addChangeStateEventListeners();
         
