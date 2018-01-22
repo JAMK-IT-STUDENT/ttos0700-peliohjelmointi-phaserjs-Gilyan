@@ -6,5 +6,5 @@ demo.state6.prototype = {
         
         addChangeStateEventListeners();
     },
-    upload: function(){}
+    update: function(){}
 };

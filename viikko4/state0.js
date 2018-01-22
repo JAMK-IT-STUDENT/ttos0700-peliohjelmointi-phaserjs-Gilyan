@@ -1,8 +1,10 @@
-var demo = {};
+var demo = {}, centerX = 1500 / 2, centerY = 1000 / 2, adam, speed = 6;
 
 demo.state0 = function(){};
 demo.state0.prototype = {
-    preload: function(){},
+    preload: function(){
+        game.load.image('adam', 'assets/sprites/adam.png');
+    },
     create: function(){
         game.stage.backgroundColor = '#ffffcc';
         
@@ -11,8 +13,31 @@ demo.state0.prototype = {
         
         // Muuttaa peli-ikkunan kokoa automaattisesti, jotta se mahtuu ikkunaan
         game.scale.scaleMode = Phaser.ScaleManager. SHOW_ALL;
+        
+        // Lisätään ukkeli peliruudun keskelle
+        adam = game.add.sprite(centerX, centerY, 'adam');
+        adam.anchor.setTo(0.5, 0.5);
     },
-    upload: function(){}
+    update: function(){
+        
+        // Liikutetaan ukkoa oikealle
+        if(game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
+            adam.x += speed;
+        }
+        // Liikutetaan ukkoa vasemmalle
+        else if(game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
+            adam.x -= speed;
+        }
+        
+        // Liikutetaan ukkoa ylös
+        if(game.input.keyboard.isDown(Phaser.Keyboard.UP)){
+            adam.y -= speed;
+        }
+        // Liikutetaan ukkoa alas
+        else if(game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
+            adam.y += speed;
+        }
+    }
 };
 
 function changeState(i, stateNum){
