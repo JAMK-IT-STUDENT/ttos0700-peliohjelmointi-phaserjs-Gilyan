@@ -78,6 +78,7 @@ demo.state0.prototype = {
 
 // Asetetaan haluttu ikkuna näkyville
 function changeState(i, stateNum){
+    console.log('state' + stateNum);
     game.state.start('state' + stateNum);
 }
 
