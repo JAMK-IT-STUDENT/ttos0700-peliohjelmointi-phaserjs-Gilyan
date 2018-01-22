@@ -1,3 +1,6 @@
+// https://www.udemy.com/making-games-with-phaser
+// State 0
+
 var demo = {}, centerX = 1500 / 2, centerY = 1000 / 2, adam, speed = 6;
 
 demo.state0 = function(){};

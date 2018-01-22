@@ -1,7 +1,9 @@
-demo.state1 = function(){};
+// https://www.udemy.com/making-games-with-phaser
+// State 1
 
 var cursors, vel = 500, rocks, grass;
 
+demo.state1 = function(){};
 demo.state1.prototype = {
     preload: function(){
         game.load.tilemap('field', 'assets/tilemaps/field.json', null, Phaser.Tilemap.TILED_JSON);
@@ -14,7 +16,6 @@ demo.state1.prototype = {
         game.physics.startSystem(Phaser.Physics.ARCADE);
         game.stage.backgroundColor = '#ffff00';
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        
         addChangeStateEventListeners();
         
         // Luodaan tilemap ja lisätään kuvat

@@ -1,3 +1,6 @@
+// https://www.udemy.com/making-games-with-phaser
+// State 2
+
 var barrel, bullets, velocity = 1000, nextFire = 0, fireRate = 200, enemy, bullet, enemyGroup;
 
 demo.state2 = function(){};
@@ -11,7 +14,6 @@ demo.state2.prototype = {
     create: function(){
         game.stage.backgroundColor = '#ffcc00';
         game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
-        
         addChangeStateEventListeners();
         
         // Lisätään tykin rengas ja skaalataan sen kokoa
