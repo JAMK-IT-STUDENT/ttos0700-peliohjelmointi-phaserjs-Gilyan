@@ -6,7 +6,11 @@ demo.state0.prototype = {
     create: function(){
         game.stage.backgroundColor = '#ffffcc';
         
+        // Luetaan näppäimistöltä numeroiden mukaan haluttu state
         addChangeStateEventListeners();
+        
+        // Muuttaa peli-ikkunan kokoa automaattisesti, jotta se mahtuu ikkunaan
+        game.scale.scaleMode = Phaser.ScaleManager. SHOW_ALL;
     },
     upload: function(){}
 };
